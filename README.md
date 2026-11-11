@@ -1,6 +1,7 @@
 # Personal Portfolio Website
 
-NAME: Ayanfeoluwa Runsewe
-MATRIC. NUMBER: 23120112051
-COURSE: CSC 419 
-DEPARTMENT: SOFTWARE ENGINEERING
+**Name:** Ayanfeoluwa Runsewe
+**Matric Number:** 23120112051
+**Course:** CSC 419 - Blockchain
+**Department:** - Software Engineering
+ 
