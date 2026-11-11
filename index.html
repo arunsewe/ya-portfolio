@@ -4,70 +4,149 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ayanfeoluwa Runsewe | Portfolio</title>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Caveat:wght@500;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="#top">Ya</a>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a class="nav-cta" href="#contact">Get in touch</a></li>
+      </ul>
     </nav>
   </header>
 
-  <main>
-    <section id="about">
+  <main id="top">
+    <section id="about" class="hero">
+      <p class="note">hi, I’m</p>
       <h1>Ayanfeoluwa Runsewe</h1>
-      <p class="role">Software Engineering student and developer, based in Lagos</p>
-
-      <p>
-        I'm a Software Engineering undergraduate at Pan-Atlantic University.
+      <p class="role"><span>Software engineer based in Lagos, Nigeria</span></p>
+      <p class="lede">
+        I’m a Software Engineering undergraduate at Pan-Atlantic University.
         I build workflow automation and web applications, and I recently
-        completed my industrial placement at dipoleDIAMOND Ltd.
+        finished my industrial placement at dipoleDIAMOND Ltd. I like solid
+        foundations: reliable servers and processes that run themselves.
       </p>
-
-      <h2>Technical focus</h2>
-      <ul>
-        <li>[your main language or stack, e.g. Node.js]</li>
-        <li>Workflow automation</li>
-        <li>Application development</li>
-      </ul>
-
-      <h2>Interests</h2>
-      <ul>
-        <li>[interest 1]</li>
-        <li>[interest 2]</li>
-      </ul>
+      <div class="hero-actions">
+        <a class="btn" href="#contact">Get in touch</a>
+        <a class="btn btn-ghost" href="#projects">See my work</a>
+      </div>
     </section>
+
+    <div class="strata" aria-hidden="true"></div>
+
+    <section id="skills">
+      <h2 class="section-title">Skills and approach</h2>
+      <p class="section-sub">what I bring to a project</p>
+
+      <div class="grid">
+        <article class="card moss">
+          <h3>Profile</h3>
+          <dl class="facts">
+            <dt>Based in</dt><dd>Lagos, Nigeria</dd>
+            <dt>Studying</dt><dd>Software Engineering, Pan-Atlantic University</dd>
+            <dt>Placement</dt><dd>dipoleDIAMOND Ltd</dd>
+            <dt>Focus</dt><dd>Workflow automation and app development</dd>
+          </dl>
+        </article>
+
+        <article class="card">
+          <h3>Strengths</h3>
+          <ul class="bullets">
+            <li>Reliable delivery under deadlines</li>
+            <li>Turning manual processes into automated workflows</li>
+            <li>Server-side development: data, logic and APIs</li>
+            <li>Learning quickly by building</li>
+          </ul>
+        </article>
+
+        <article class="card stone">
+          <h3>Currently improving</h3>
+          <ul class="bullets">
+            <li>Front-end design and polish</li>
+            <li>Writing tests earlier in a project</li>
+            <li>Estimating time on unfamiliar problems</li>
+          </ul>
+        </article>
+
+        <aside class="card scroll">
+          <blockquote><p>Build it simple. Make it reliable.</p></blockquote>
+        </aside>
+
+        <article class="card wide">
+          <h3>Skills</h3>
+          <ul class="moves">
+            <li class="move"><h4>Backend development</h4><p>Node.js servers and APIs built to keep running.</p></li>
+            <li class="move"><h4>Workflow automation</h4><p>Approval flows modelled in BPMN and built in ProcessMaker 4.</p></li>
+            <li class="move"><h4>Debugging</h4><p>Tracing issues through logs, data and code.</p></li>
+            <li class="move"><h4>Front-end development</h4><p>Responsive pages in HTML, CSS and JavaScript.</p></li>
+          </ul>
+        </article>
+
+        <article class="card wide moss">
+          <h3>How I work</h3>
+          <ol class="steps">
+            <li><b>Understand</b>Clarify the problem before touching code.</li>
+            <li><b>Model</b>Map the process, usually in BPMN.</li>
+            <li><b>Design</b>Pick the simplest approach that works.</li>
+            <li><b>Build</b>Write it in small pieces and test often.</li>
+            <li><b>Deploy</b>Ship it, check it, and fix what broke.</li>
+          </ol>
+        </article>
+      </div>
+    </section>
+
+    <div class="strata" aria-hidden="true"></div>
 
     <section id="projects">
-      <h2>Projects</h2>
+      <h2 class="section-title">Projects</h2>
+      <p class="section-sub">things I’ve built</p>
 
-      <article class="project-card">
-        <img src="images/leave-management.png" alt="Leave Management System dashboard">
-        <h3>Leave Management System</h3>
-        <p>[One or two sentences: what it does and who it's for.]</p>
-        <p class="stack">[e.g. Node.js, Express, MongoDB]</p>
-        <a href="[GitHub repo URL]" target="_blank" rel="noopener">View code</a>
-      </article>
+      <div class="projects-grid">
+        <article class="project">
+          <div class="shot"><img src="images/leave-management.png" alt="Leave Management System dashboard"></div>
+          <div class="project-body">
+            <h3>Leave Management System</h3>
+            <!-- EDIT: describe your real features -->
+            <p>Staff request time off, managers approve or reject, and leave balances update on their own.</p>
+            <ul class="stack"><li>[tech 1]</li><li>[tech 2]</li><li>[tech 3]</li></ul>
+            <a href="https://github.com/arunsewe/[leave-repo-name]" target="_blank" rel="noopener">View code on GitHub</a>
+          </div>
+        </article>
 
-      <article class="project-card">
-        <img src="images/newsletter.png" alt="Email Newsletter System dashboard">
-        <h3>Email Newsletter System</h3>
-        <p>[One or two sentences: what it does and who it's for.]</p>
-        <p class="stack">[e.g. Node.js, Express, PostgreSQL]</p>
-        <a href="project.html">View details</a>
-      </article>
+        <article class="project">
+          <div class="shot"><img src="images/newsletter.png" alt="Email Newsletter System dashboard"></div>
+          <div class="project-body">
+            <h3>Email Newsletter System</h3>
+            <!-- EDIT: describe your real features -->
+            <p>Manage subscribers, write a campaign, and send it to the whole list from one place.</p>
+            <ul class="stack"><li>[tech 1]</li><li>[tech 2]</li><li>[tech 3]</li></ul>
+            <a href="project.html">Read the full story</a>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <section id="contact"></section>
+    <section id="contact" class="contact">
+      <h2>Let’s work together</h2>
+      <p>Open to internships, junior roles and projects. Send a message and I’ll reply quickly.</p>
+      <div class="hero-actions">
+        <!-- EDIT: use your real email and WhatsApp number (234 then the number without the first 0) -->
+        <a class="btn" href="mailto:youremail@example.com">Email me</a>
+        <a class="btn btn-ghost" href="https://wa.me/234XXXXXXXXXX" target="_blank" rel="noopener">Message on WhatsApp</a>
+      </div>
+    </section>
   </main>
 
-  <footer></footer>
+  <footer>
+    <p>Ayanfeoluwa Runsewe, CSC 419, Pan-Atlantic University.</p>
+  </footer>
 
   <script src="js/main.js"></script>
 </body>
