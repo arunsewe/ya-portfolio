@@ -35,11 +35,10 @@ section { padding: clamp(2.5rem, 7vw, 5rem) max(var(--gutter), calc((100% - 70re
 
 /* navigation */
 .site-header { position: sticky; top: 0; z-index: 10; background: var(--cream); border-bottom: 2.5px solid var(--soil); }
-.nav { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem 1rem; padding: 0.7rem var(--gutter); max-width: 70rem; margin: 0 auto; }
+.nav { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-start; gap: 0.5rem 1rem; padding: 0.7rem var(--gutter); max-width: 70rem; margin: 0 auto; }
 .nav ul { display: flex; flex-wrap: wrap; align-items: center; gap: 0.3rem 1.1rem; }
 .nav a { color: var(--ink); text-decoration: none; font-weight: 500; }
 .nav a:hover { color: var(--moss); }
-.nav .brand { font-family: var(--font-display); font-size: 1.6rem; color: var(--moss); }
 .nav .nav-cta { background: var(--marigold); border: 2px solid var(--soil); border-radius: 999px; padding: 0.3rem 0.9rem; }
 .nav .nav-cta:hover { background: var(--matcha); color: var(--ink); }
 
@@ -136,3 +135,11 @@ footer { background: var(--soil); color: var(--cream); padding: 1.2rem var(--gut
   html { scroll-behavior: auto; }
   .btn { transition: none; }
 }
+
+/* project details page */
+.back { display: inline-block; margin-bottom: 1rem; font-weight: 700; }
+.detail-hero h1 { font-size: clamp(2.2rem, 8vw, 4.5rem); }
+.shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1.6rem; margin-top: 1.4rem; }
+.shots figure { overflow: hidden; background: var(--paper); border: 2.5px solid var(--soil); border-radius: 18px 12px 22px 14px; box-shadow: 5px 6px 0 var(--soil); }
+.shots figcaption { padding: 0.6rem 1rem; font-family: var(--font-note); font-size: 1.5rem; color: var(--soil); }
+.card p { max-width: 60ch; }
