@@ -1,0 +1,53 @@
+:root {
+  /* palette: change these to make it yours */
+  --cream: #f6efd9;
+  --matcha: #8da05b;
+  --matcha-dark: #5e7040;
+  --ink: #3b3224;
+  --pop: #e07a3f;   /* tiny retro orange accent, use sparingly */
+
+  /* fonts */
+  --font-display: "Caprasimo", serif;
+  --font-body: "DM Sans", sans-serif;
+  --font-note: "Caveat", cursive;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  padding: 1.5rem;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 8vw, 4.5rem);
+  color: var(--matcha-dark);
+}
+
+h2 {
+  font-size: clamp(1.6rem, 5vw, 2.5rem);
+  margin: 2rem 0 0.75rem;
+}
+
+a {
+  color: var(--matcha-dark);
+}
+
+.note {
+  font-family: var(--font-note);
+  font-size: 1.5rem;
+  color: var(--pop);
+}
