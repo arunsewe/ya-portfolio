@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TastyBites | Ayanfeoluwa Runsewe</title>
+  <title>Cafeteria App | Ayanfeoluwa Runsewe</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Caveat:wght@500;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
@@ -25,10 +25,10 @@
     <section class="hero detail-hero">
       <a class="back" href="index.html#projects">Back to projects</a>
       <p class="note">project details</p>
-      <h1>TastyBites</h1>
-      <p class="lede">A full-stack customer records manager for a restaurant, built with a React frontend, a NestJS backend and Nginx.</p>
+      <h1>Cafeteria App</h1>
+      <p class="lede">A desktop cafeteria app built for a school, with a customer side for browsing and buying and a dashboard for managers.</p>
       <div class="hero-actions">
-        <a class="btn" href="https://github.com/arunsewe/[tastybites-repo-name]" target="_blank" rel="noopener">View code on GitHub</a>
+        <a class="btn" href="https://github.com/arunsewe/cafeteriaapp" target="_blank" rel="noopener">View code on GitHub</a>
       </div>
     </section>
 
@@ -38,8 +38,8 @@
       <h2 class="section-title">Screenshots</h2>
       <div class="shots">
         <figure>
-          <div class="shot"><img src="images/tastybites-1.png" alt="TastyBites registration form and customer list"></div>
-          <figcaption>Registering customers and the customer list</figcaption>
+          <div class="shot"><img src="images/cafeteria-app.jpg" alt="Cafeteria app home screen with menu, cart, orders and profile"></div>
+          <figcaption>Customer home screen</figcaption>
         </figure>
       </div>
     </section>
@@ -50,41 +50,43 @@
       <div class="grid">
         <article class="card wide">
           <h3>Overview</h3>
-          <p>TastyBites Customer Records Manager is a web application for keeping track of a restaurant’s customers and their orders. A React frontend talks to a NestJS backend that stores everything in PostgreSQL, and the app is served with Nginx.</p>
+          <p>The Cafeteria App is a desktop application I built as a school project. Customers log in, browse the menu, add items to a cart and purchase, and can look back at their orders and profile. A separate manager dashboard lets managers add stock and look after the cafeteria side. The screens were designed in Scene Builder, and the data is stored in PostgreSQL.</p>
         </article>
 
         <article class="card moss">
           <h3>Problem I solved</h3>
-          <!-- EDIT: make this match your real motivation -->
-          <p>Customer details and orders are easy to lose track of when they live in notebooks or scattered files. TastyBites keeps every customer and their orders in one place, where staff can find, update and add to them quickly.</p>
+          <!-- EDIT: make this match the real brief you were given -->
+          <p>Ordering at a school cafeteria usually means queues and manual tracking. This app lets customers choose and purchase from their own screen, while managers can add stock and keep things running from one place.</p>
         </article>
 
         <article class="card">
           <h3>Features</h3>
+          <!-- EDIT: add anything else the manager dashboard can do -->
           <ul class="bullets">
-            <li>Register a customer with name, date of birth and home address</li>
-            <li>See every customer in one list</li>
-            <li>Edit or delete a customer record</li>
-            <li>Add an order for a customer</li>
-            <li>View a customer’s orders</li>
+            <li>Log in to a personal account</li>
+            <li>See your account balance</li>
+            <li>Browse the menu</li>
+            <li>Add items to a cart and purchase</li>
+            <li>Review past orders and your profile</li>
+            <li>Manager dashboard for adding stock and managing the cafeteria</li>
           </ul>
         </article>
 
         <article class="card stone">
           <h3>Technologies used</h3>
           <ul class="stack">
-            <li>React</li><li>NestJS</li><li>PostgreSQL</li><li>Nginx</li>
+            <li>Java</li><li>JavaFX</li><li>Scene Builder</li><li>NetBeans</li><li>PostgreSQL</li>
           </ul>
         </article>
 
         <article class="card wide moss">
           <h3>What I learned</h3>
-          <!-- EDIT: check each point is true to your experience and adjust the wording -->
+          <!-- EDIT: keep only the points that match what you really used in the code -->
           <ul class="bullets">
-            <li>Splitting the frontend and backend was new to me. React only shows data and sends requests, while NestJS owns the rules, so I had to agree on what the API sends back before either side would work.</li>
-            <li>NestJS pushed me to separate controllers from services instead of piling everything into one file. It felt like extra work at first, but it made bugs far easier to find.</li>
-            <li>Tying each customer to their own orders in PostgreSQL taught me to plan how tables relate before writing code, because that is painful to change later.</li>
-            <li>Putting Nginx in the stack showed me that running an app is a separate job from writing it.</li>
+            <li>How to do object-oriented programming in Java. Instead of loose variables, things like menu items, carts, orders and users became their own classes, each with its own data and behaviour.</li>
+            <li>Encapsulation: keeping fields private and using getters and setters, so the rest of the app can't change something like a cart or a balance in ways it shouldn't.</li>
+            <li>Inheritance, interfaces and abstraction: sharing common behaviour in one place instead of copying it across screens.</li>
+            <li>Separating concerns: JavaFX controllers for the screens, plain classes for the data, and separate code for talking to PostgreSQL, so one change didn't break something unrelated.</li>
           </ul>
         </article>
       </div>
