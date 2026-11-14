@@ -50,7 +50,7 @@
       <div class="grid">
         <article class="card wide">
           <h3>Overview</h3>
-          <p>TastyBites Customer Records Manager is a web application for keeping track of a restaurant’s customers and their orders. A React frontend talks to a NestJS backend, and the app is served with Nginx.</p>
+          <p>TastyBites Customer Records Manager is a web application for keeping track of a restaurant’s customers and their orders. A React frontend talks to a NestJS backend that stores everything in PostgreSQL, and the app is served with Nginx.</p>
         </article>
 
         <article class="card moss">
@@ -73,17 +73,18 @@
         <article class="card stone">
           <h3>Technologies used</h3>
           <ul class="stack">
-            <li>React</li><li>NestJS</li><li>Nginx</li>
+            <li>React</li><li>NestJS</li><li>PostgreSQL</li><li>Nginx</li>
           </ul>
         </article>
 
         <article class="card wide moss">
           <h3>What I learned</h3>
-          <!-- EDIT: be specific and honest, this is what lecturers read closely -->
+          <!-- EDIT: check each point is true to your experience and adjust the wording -->
           <ul class="bullets">
-            <li>[How the React frontend talks to the NestJS API]</li>
-            <li>[What Nginx does in your setup and why you used it]</li>
-            <li>[Something you would do differently next time]</li>
+            <li>Splitting the frontend and backend was new to me. React only shows data and sends requests, while NestJS owns the rules, so I had to agree on what the API sends back before either side would work.</li>
+            <li>NestJS pushed me to separate controllers from services instead of piling everything into one file. It felt like extra work at first, but it made bugs far easier to find.</li>
+            <li>Tying each customer to their own orders in PostgreSQL taught me to plan how tables relate before writing code, because that is painful to change later.</li>
+            <li>Putting Nginx in the stack showed me that running an app is a separate job from writing it.</li>
           </ul>
         </article>
       </div>
