@@ -81,12 +81,12 @@
 
         <article class="card wide moss">
           <h3>What I learned</h3>
-          <!-- EDIT: keep only the points that match what you really used in the code -->
+          <!-- EDIT: check each point is true to your experience and adjust the wording -->
           <ul class="bullets">
-            <li>How to do object-oriented programming in Java. Instead of loose variables, things like menu items, carts, orders and users became their own classes, each with its own data and behaviour.</li>
-            <li>Encapsulation: keeping fields private and using getters and setters, so the rest of the app can't change something like a cart or a balance in ways it shouldn't.</li>
-            <li>Inheritance, interfaces and abstraction: sharing common behaviour in one place instead of copying it across screens.</li>
-            <li>Separating concerns: JavaFX controllers for the screens, plain classes for the data, and separate code for talking to PostgreSQL, so one change didn't break something unrelated.</li>
+            <li>Scene Builder let me design screens by dragging things around, but every button and field still had to be wired to Java code. That taught me how an interface and the logic behind it actually talk to each other.</li>
+            <li>Connecting a desktop app to PostgreSQL meant thinking about users, menu items, carts and orders as separate tables that relate to each other.</li>
+            <li>Building a manager dashboard next to the customer screens showed me that different users need different views of the same data.</li>
+            <li>On a project this size, keeping screens, controllers and database code in separate places stopped one change from breaking something unrelated.</li>
           </ul>
         </article>
       </div>
