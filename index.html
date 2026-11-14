@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ayanfeoluwa Runsewe | Portfolio</title>
+  <script>
+    /* apply a saved theme before the page paints, so there is no flash */
+    try { if (localStorage.getItem("theme") === "dark") document.documentElement.dataset.theme = "dark"; } catch (e) {}
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Caveat:wght@500;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
@@ -16,6 +20,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><button class="theme-toggle" type="button">Night mode</button></li>
         <li><a class="nav-cta" href="#contact">Get in touch</a></li>
       </ul>
     </nav>
@@ -27,9 +32,14 @@
       <h1>Ayanfeoluwa Runsewe</h1>
       <p class="role"><span>Software engineer based in Lagos, Nigeria</span></p>
       <p class="lede">
-        I’m a Software Engineering undergraduate at Pan-Atlantic University.
-        I build workflow automation and web applications. I like solid
-        foundations: reliable servers and processes that run themselves.
+        But everyone calls me Ya. I’m a Software Engineering student from Lagos,
+        and I build workflow automation and web apps.
+      </p>
+      <p class="lede">
+        My type on paper? Clean code and clear requirements. In reality, I fall for
+        any messy problem that needs fixing. I’m a catch because I read the error
+        message, and then I read it again. I’m here to find a team to build with,
+        and I’m not leaving until it ships.
       </p>
       <div class="hero-actions">
         <a class="btn" href="#contact">Get in touch</a>
@@ -45,30 +55,29 @@
 
       <div class="grid">
         <article class="card moss">
-          <h3>Profile</h3>
+          <h3>Player profile</h3>
           <dl class="facts">
-            <dt>Based in</dt><dd>Lagos, Nigeria</dd>
+            <dt>Home base</dt><dd>Lagos, Nigeria</dd>
             <dt>Studying</dt><dd>Software Engineering, Pan-Atlantic University</dd>
-            <dt>Focus</dt><dd>Workflow automation and app development</dd>
+            <dt>Main quest</dt><dd>Workflow automation and app development</dd>
+            <dt>Side quests</dt><dd>Full-stack web apps with React and NestJS</dd>
           </dl>
         </article>
 
         <article class="card">
-          <h3>Strengths</h3>
-          <ul class="bullets">
-            <li>Reliable delivery under deadlines</li>
-            <li>Turning manual processes into automated workflows</li>
-            <li>Server-side development: data, logic and APIs</li>
-            <li>Learning quickly by building</li>
+          <h3>Languages and tools</h3>
+          <ul class="stack">
+            <li>TypeScript</li><li>JavaScript</li><li>Java</li><li>React</li><li>Rust</li><li>Python</li>
           </ul>
         </article>
 
         <article class="card wide stone">
-          <h3>Currently improving</h3>
+          <h3>Currently levelling up</h3>
+          <!-- EDIT: change these to what you are really working on -->
           <ul class="bullets">
-            <li>Front-end design and polish</li>
-            <li>Writing tests earlier in a project</li>
-            <li>Estimating time on unfamiliar problems</li>
+            <li>Rust</li>
+            <li>Full-stack builds, from the database to the screen</li>
+            <li>Front-end polish and animation, like the bug hunt below</li>
           </ul>
         </article>
 
@@ -83,14 +92,17 @@
         </article>
 
         <article class="card wide moss">
-          <h3>How I work</h3>
-          <ol class="steps">
-            <li><b>Understand</b>Clarify the problem before touching code.</li>
-            <li><b>Model</b>Map the process, usually in BPMN.</li>
-            <li><b>Design</b>Pick the simplest approach that works.</li>
-            <li><b>Build</b>Write it in small pieces and test often.</li>
-            <li><b>Deploy</b>Ship it, check it, and fix what broke.</li>
-          </ol>
+          <h3>Bug hunt</h3>
+          <p>Debugging is a big part of how I work. Squash as many bugs as you can in 15 seconds.</p>
+          <div class="game-bar">
+            <span>Score <b id="score">0</b></span>
+            <span>Time <b id="time">15</b></span>
+            <span>Best <b id="best">0</b></span>
+          </div>
+          <div class="game-field" id="field">
+            <button type="button" class="bug" id="bug" aria-label="Squash the bug" hidden></button>
+            <button type="button" class="btn" id="start">Start</button>
+          </div>
         </article>
       </div>
     </section>
@@ -136,7 +148,7 @@
   </main>
 
   <footer>
-    <p>Ayanfeoluwa Runsewe, Pan-Atlantic University.</p>
+    <p>Ayanfeoluwa Runsewe, CSC 419, Pan-Atlantic University.</p>
   </footer>
 
   <script src="js/main.js"></script>
