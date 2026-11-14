@@ -1,4 +1,3 @@
-// Bug hunt mini game: click the bug as many times as you can in 15 seconds.
 const field = document.getElementById("field");
 
 if (field) {
@@ -18,7 +17,6 @@ if (field) {
   try {
     best = Number(localStorage.getItem("bugBest")) || 0;
   } catch (e) {
-    // storage blocked: best score just resets each visit
   }
   bestEl.textContent = best;
 
