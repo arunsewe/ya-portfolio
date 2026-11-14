@@ -27,6 +27,7 @@ body {
 }
 img { max-width: 100%; display: block; }
 ul, ol { list-style: none; }
+[hidden] { display: none !important; }
 a { color: var(--moss); }
 :focus-visible { outline: 3px solid var(--marigold); outline-offset: 3px; }
 h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 400; line-height: 1.1; overflow-wrap: anywhere; }
@@ -104,7 +105,7 @@ section { padding: clamp(2.5rem, 7vw, 5rem) max(var(--gutter), calc((100% - 70re
   border: 2.5px solid var(--soil); border-radius: 20px 12px 26px 14px; box-shadow: 6px 7px 0 var(--soil);
 }
 .shot { aspect-ratio: 16 / 10; background: var(--moss-pale); border-bottom: 2.5px solid var(--soil); }
-.shot img { width: 100%; height: 100%; object-fit: cover; }
+.shot img { width: 100%; height: 100%; object-fit: contain; }
 .project-body { display: grid; align-content: start; gap: 0.7rem; padding: 1.2rem 1.4rem 1.5rem; }
 .project-body h3 { font-size: 1.6rem; color: var(--moss); }
 .stack { display: flex; flex-wrap: wrap; gap: 0.4rem; }
@@ -140,3 +141,25 @@ footer { background: var(--soil); color: var(--cream); padding: 1.2rem var(--gut
 .shots figure { overflow: hidden; background: var(--paper); border: 2.5px solid var(--soil); border-radius: 18px 12px 22px 14px; box-shadow: 5px 6px 0 var(--soil); }
 .shots figcaption { padding: 0.6rem 1rem; font-family: var(--font-note); font-size: 1.5rem; color: var(--soil); }
 .card p { max-width: 60ch; }
+
+/* bigger chips inside cards */
+.card .stack { gap: 0.6rem; }
+.card .stack li { font-size: 1.05rem; padding: 0.2rem 0.9rem; }
+
+/* bug hunt game */
+.game-bar { display: flex; flex-wrap: wrap; gap: 0.4rem 1.6rem; margin: 0.9rem 0 0.7rem; font-weight: 700; }
+.game-field {
+  position: relative; display: flex; align-items: center; justify-content: center; height: 14rem; overflow: hidden;
+  user-select: none; touch-action: manipulation;
+  background: var(--paper); border: 2.5px dashed var(--soil); border-radius: 18px 10px 20px 12px;
+}
+.bug {
+  position: absolute; z-index: 1; width: 2.9rem; height: 2.9rem; padding: 0; cursor: pointer; touch-action: manipulation;
+  background: var(--matcha); border: 2.5px solid var(--soil); border-radius: 50% 50% 45% 45%;
+  transform: translate(-50%, -50%); transition: left 0.3s, top 0.3s; animation: wiggle 0.4s infinite alternate;
+}
+.bug::before, .bug::after { content: ""; position: absolute; top: 30%; width: 0.5rem; height: 0.5rem; border-radius: 50%; background: var(--ink); }
+.bug::before { left: 22%; }
+.bug::after { right: 22%; }
+@keyframes wiggle { from { rotate: -8deg; } to { rotate: 8deg; } }
+@media (prefers-reduced-motion: reduce) { .bug { animation: none; transition: none; } }
